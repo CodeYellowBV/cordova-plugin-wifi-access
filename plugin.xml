@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="nl.codeyellow.wifi-access"
+    version="0.1">
+  <name>Android WIFI Access</name>
+  <license>Apache 2.0 License</license>
+  <author>Code Yellow B.V.</author>
+  <description>
+    Request WIFI access on Android for a Cordova project.
+  </description>
+
+  <info>
+    This is a trivial plugin to add ACCESS_WIFI_STATE to your
+    AndroidManifest.xml file in a clean way (ie, without scripting
+    your way around using hooks or manipulating the file by hand).
+
+    This permission is required when you use Crosswalk+Cordova, see
+    https://crosswalk-project.org/#documentation/cordova/migrate_an_application/migrate
+    for more information.
+  </info>
+
+  <platform name="android">
+      <config-file target="AndroidManifest.xml" parent="/manifest">
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      </config-file>
+  </platform>
+</plugin>
